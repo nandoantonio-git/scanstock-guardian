@@ -3,6 +3,10 @@ import { Header } from "@/components/layout/header";
 import { Navigation } from "@/components/layout/navigation";
 import { DashboardOverview } from "@/components/dashboard/dashboard-overview";
 import { ScanInterface } from "@/components/scan/scan-interface";
+import { InventoryInterface } from "@/components/inventory/inventory-interface";
+import { MovementsInterface } from "@/components/movements/movements-interface";
+import { CountingInterface } from "@/components/counting/counting-interface";
+import { ReportsInterface } from "@/components/reports/reports-interface";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -14,13 +18,13 @@ const Index = () => {
       case "scan":
         return <ScanInterface />;
       case "inventory":
-        return <div className="p-6"><h2 className="text-2xl font-bold">Estoque</h2></div>;
+        return <InventoryInterface />;
       case "movements":
-        return <div className="p-6"><h2 className="text-2xl font-bold">Movimentos</h2></div>;
+        return <MovementsInterface />;
       case "counting":
-        return <div className="p-6"><h2 className="text-2xl font-bold">Contagem Cíclica</h2></div>;
+        return <CountingInterface />;
       case "reports":
-        return <div className="p-6"><h2 className="text-2xl font-bold">Relatórios</h2></div>;
+        return <ReportsInterface />;
       default:
         return <DashboardOverview />;
     }
