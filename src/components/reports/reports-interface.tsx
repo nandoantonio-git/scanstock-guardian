@@ -12,7 +12,7 @@ import {
   AlertTriangle, 
   Download,
   FileText,
-  PieChart,
+  PieChart as PieChartIcon,
   Activity,
   Calendar,
   Filter
@@ -25,7 +25,7 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  PieChart as RechartsPieChart,
+  PieChart,
   Pie,
   Cell,
   LineChart,
@@ -229,11 +229,11 @@ export function ReportsInterface() {
             <MedicalCard>
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold flex items-center gap-2">
-                  <PieChart className="w-5 h-5" />
+                  <PieChartIcon className="w-5 h-5" />
                   Distribuição por Categoria
                 </h3>
                 <ResponsiveContainer width="100%" height={300}>
-                  <RechartsPieChart>
+                  <PieChart>
                     <Pie
                       dataKey="value"
                       data={categoryData}
@@ -247,7 +247,7 @@ export function ReportsInterface() {
                       ))}
                     </Pie>
                     <Tooltip />
-                  </RechartsPieChart>
+                  </PieChart>
                 </ResponsiveContainer>
               </div>
             </MedicalCard>
