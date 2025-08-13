@@ -20,7 +20,7 @@ export function Header() {
             <div className="w-4 h-4 bg-primary-foreground rounded-sm" />
           </div>
           <div>
-            <h1 className="text-lg font-bold text-foreground">ScanStock</h1>
+            <h1 className="text-lg font-bold text-foreground">BEEP</h1>
             <p className="text-xs text-muted-foreground">Health</p>
           </div>
         </div>
